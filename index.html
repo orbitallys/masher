@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mash</title>
+    <link rel="stylesheet" href="masher.css">
+</head>
+<body>
+
+<img id="custom-cursor" src="assets/cursor.png" alt="">
+
+<div class="arcade-layout">
+
+    <aside class="ad-banner">
+        <img id="ad-left" src="assets/ad-left.png" alt="Ad Space" onerror="this.style.display='none'">
+    </aside>
+
+    <div id="game-container">
+
+        <div id="menu-screen" class="screen active">
+            <h1>Potato Masher</h1>
+            <p>Test your mashing capabilities...</p>
+            <input type="text" id="player-name" placeholder="Enter your name" maxlength="15">
+            <button id="btn-begin">Begin Mashing</button>
+            <button id="btn-leaderboard">Leaderboard</button>
+        </div>
+
+        <div id="leaderboard-screen" class="screen">
+            <h1>Leaderboard</h1>
+            <ul id="leaderboard-list"></ul>
+            <button id="btn-back-menu">Menu</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+
+            <div id="meter-panel">
+                <span id="meter-label">Meter</span>
+                <div id="meter-container">
+                    <div id="meter-fill"></div>
+                </div>
+                <span id="meter-value">0</span>
+                <img id="active-pup" src="" alt="">
+                <div id="pup-timer-bar-container">
+                    <div id="pup-timer-bar"></div>
+                </div>
+            </div>
+
+            <div id="mash-area" class="plaid-table">
+                <div id="timer-display">3:30</div>
+                <img id="potato-img" src="assets/potato.png" alt="Mario Potato">
+                <div id="pup-notify"></div>
+                <button id="btn-finish" style="display:none;">Finish!</button>
+
+                <div id="tutorial-overlay">
+                    <div class="overlay"></div>
+                    <div id="tutorial-content">
+                        <img src="assets/potato.png" id="tutorial-potato" alt="Spud">
+                        <p id="tutorial-text">This is Spud. You have to click (mash) Spud enough to raise your mash meter. Occasionally, power-ups will cascade from the ceiling that help you mash more.<br><br>Mash as much as you can!</p>
+                        <button id="btn-tutorial-start">Start</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="finished-screen" class="screen">
+            <div class="plaid-table finish-layout">
+                <div class="overlay"></div>
+                <h1 class="finish-title">Potato Complete</h1>
+                <h2 id="result-level" class="finish-title">Mash Level: 0</h2>
+                <h3 id="result-player" class="finish-title"></h3>
+                <div id="result-display">
+                    <img src="assets/swirleffect.gif" id="swirl-bg">
+                    <img src="" id="result-potato">
+                </div>
+                <p id="result-made-label" class="finish-title">You made...</p>
+                <p id="result-food-name" class="finish-title food-name"></p>
+                <p id="result-time" class="finish-title finish-time"></p>
+                <button id="btn-menu-from-finish">Menu</button>
+            </div>
+        </div>
+
+    </div>
+
+    <aside class="ad-banner">
+        <img id="ad-right" src="assets/ad-right.png" alt="Ad Space" onerror="this.style.display='none'">
+    </aside>
+
+</div>
+
+<script src="masher.js"></script>
+</body>
+</html>
